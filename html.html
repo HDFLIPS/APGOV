@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AP Gov Civic Engagement Project</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: url('https://cdn.sanity.io/images/7i1ps9pf/production/6b76660372ea75501c6b34dcb23cf534b54a5ba9-6000x4000.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .page {
+      display: none;
+      width: 100%;
+      min-height: 100vh;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .active {
+      display: block;
+    }
+
+    #page1, #page2 {
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    #page1 h1 {
+      font-size: 3em;
+      margin-top: 30vh;
+    }
+
+    #startButton {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: #002868;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #startButton:hover {
+      background-color: #bf0a30;
+    }
+
+    #page2 .button {
+      position: absolute;
+      width: 200px;
+      padding: 15px;
+      font-size: 1.1em;
+      background-color: rgba(255, 255, 255, 0.85);
+      border: none;
+      border-radius: 10px;
+      color: #002868;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #page2 .button:hover {
+      background-color: #bf0a30;
+      color: white;
+    }
+
+    #community { top: 10%; left: 10%; }
+    #city { top: 10%; right: 10%; }
+    #state { bottom: 10%; left: 10%; }
+    #nation { bottom: 10%; right: 10%; }
+
+    #page2 h2 {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-shadow: 2px 2px 8px black;
+      font-size: 2.5em;
+    }
+
+    #citationsBtn {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      color: #002868;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    #citationsBtn:hover {
+      background-color: #bf0a30;
+      color: white;
+    }
+
+    .issue-image {
+      float: right;
+      width: 35%;
+      margin: 0 0 20px 20px;
+      border-radius: 10px;
+    }
+
+    #texas-image {
+      width: 30%;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 20px;
+      background-color: #002868;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .back-button:hover {
+      background-color: #bf0a30;
+    }
+
+    .issue-content {
+      color: black;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      max-width: 90%;
+      margin: 40px auto;
+    }
+
+    .solution {
+      display: none;
+      margin-top: 20px;
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .show-solution {
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #002868;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .show-solution:hover {
+      background-color: #bf0a30;
+    }
+
+    .citation-block {
+      background-color: white;
+      color: black;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .citation-block h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Page 1 -->
+<div id="page1" class="page active">
+  <h1>AP Government<br>Civic Engagement Project</h1>
+  <button id="startButton" onclick="goToPage('page2')">Start</button>
+</div>
+
+<!-- Page 2 -->
+<div id="page2" class="page">
+  <h2>Select a Level to Explore Civic Issues</h2>
+  <button id="community" class="button" onclick="goToPage('communityPage')">In My Community</button>
+  <button id="city" class="button" onclick="goToPage('cityPage')">In My City</button>
+  <button id="state" class="button" onclick="goToPage('statePage')">In My State</button>
+  <button id="nation" class="button" onclick="goToPage('nationPage')">In the United States</button>
+  <button id="citationsBtn" onclick="goToPage('citationsPage')">Citations</button>
+</div>
+
+<!-- Community Page -->
+<div id="communityPage" class="page">
+  <div class="issue-content">
+    <img class="issue-image" src="https://ideapublicschools.org/wp-content/uploads/2019/09/idea-brownsville-mascot.png" alt="IDEA Brownsville" />
+    <h2>Community: IDEA Brownsville College Prep</h2>
+    <p>
+    <h2>My Community – IDEA Brownsville College Prep High School</h2>
+    <p>IDEA Brownsville College Prep High School is a place where a lot of students, including myself, are working hard to get ready for college. But lately, we’ve been facing a big problem that affects everyone: attendance. When students don’t show up to school, it’s not just about missing class—it actually costs our school money. In Texas, schools get funding based on how many students are present each day. So, if a lot of people are absent, our school gets less money to spend on teachers, supplies, and activities. This is a big deal, especially since most of us come from families that don’t have a lot of extra money.</p>
+    <p>The current rule at IDEA Brownsville says you can miss up to 18 days before you get in trouble, but a lot of students take advantage of this. Some people skip for reasons that aren’t really emergencies, and sometimes absences get excused even if there’s no real reason. This makes it harder for teachers to teach and for students to keep up with their work. Plus, when the school loses funding, it hurts everyone—not just the people who are absent.</p>
+
+
+    <button class="show-solution" onclick="toggleSolution('solution-community')">Show Solutions</button>
+    <div id="solution-community" class="solution">
+      <h3>Possible Solutions</h3>
+      <li><strong>Stricter Absence Policy:</strong> Absences should only be excused with a doctor's note. Without it, the absence should count as skipping school.</li>
+      <li><strong>Reward Good Attendance:</strong> Offer incentives like special events, prizes, or field trips for students with great attendance.</li>
+      <li><strong>Change the 18-Absence Rule:</strong> Lower the absence limit or make it harder to get absences excused to encourage better attendance.</li>
+      </ul>
+    </div>
+
+  </div>
+
+    <button class="back-button" onclick="goToPage('page2')">Go Back</button>
+  </div>
+</div>
+
+<!-- City Page -->
+<div id="cityPage" class="page">
+  <div class="issue-content">
+    <img class="issue-image" src="https://www.brownsvilletx.gov/ImageRepository/Document?documentID=4355&&thumbnailSize=AspectPreserved_Thumb100X100" alt="Brownsville City Hall" />
+    <h2>City: Brownsville, Texas</h2>
+
+    <p>Brownsville is a city with a lot of culture and pride, but we have some real problems when it comes to health. A lot of people here struggle with things like diabetes, obesity, and heart problems. These health issues are worse here than in many other places in Texas or the United States. There are a few main reasons this is happening.</p>
+    <p>First, Brownsville is an underfunded city. Many families don’t have much money, and that makes it hard to afford healthy food or go to the doctor when they need to. Fast food and junk food are cheap and easy to get, but they’re not good for you. There aren’t a lot of grocery stores with fresh fruits and vegetables, especially in poorer neighborhoods.</p>
+    <p>Second, there’s not enough health education. Many people don’t know about healthy eating, exercise, or how to prevent diseases. Schools try to help, but they don’t always have the resources to teach everyone about staying healthy. This means that unhealthy habits can get passed down from parents to kids.</p>
+    <p>Finally, our city’s health clinics and hospitals are often crowded and underfunded. Some people don’t have insurance or can’t get an appointment, so they just skip going to the doctor. Language barriers and transportation problems make it even harder for some families to get the help they need.</p>
+
+
+    <button class="show-solution" onclick="toggleSolution('solution-city')">Show Solutions</button>
+    <div id="solution-city" class="solution">
+      <h3>Possible Solutions</h3>
+      <ul>
+        <li>More funding for clinics and hospitals</li>
+        <li>Better health education in schools and community centers</li>
+        <li>Easier access to healthy food options</li>
+        <li>Help with transportation and bilingual services</li>
+      </ul>
+    </div>
+
+    <button class="back-button" onclick="goToPage('page2')">Go Back</button>
+  </div>
+</div>
+
+<!-- State Page -->
+<div id="statePage" class="page">
+  <div class="issue-content">
+    <img id="texas-image" class="issue-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Texas_flag_map.svg/1200px-Texas_flag_map.svg.png" alt="Texas State Capitol" />
+    <h2>State: Texas</h2>
+
+    <p>Right now, Texas is having a huge debate about how to pay for public schools. For years, the money schools get for each student hasn’t really gone up, even though everything else is getting more expensive. This means schools have to make tough choices—sometimes cutting teachers, sports, or music programs. At the same time, there’s a new law that lets families use public money to pay for private school tuition, which is called a voucher program.</p>
+    <p>Supporters of vouchers say it gives parents more choices, but a lot of teachers and parents are worried. They think this will take even more money away from public schools, especially in neighborhoods that already don’t have enough. House Bill 2, a bill that would give public schools more money per student and raise teacher pay, passed in the Texas House but is stuck in the Senate right now. If it doesn’t pass, some schools could run out of money and even close.</p>
+
+    <
+
+    <button class="show-solution" onclick="toggleSolution('solution-state')">Show Solutions</button>
+    <div id="solution-state" class="solution">
+      <h3>Possible Solutions</h3>
+      <p>
+      <ul>
+        <li>Pass House Bill 2 to increase funding and raise teacher salaries</li>
+        <li>Prioritize public schools over private school vouchers</li>
+        <li>Regularly raise the basic allotment per student</li>
+        <li>Provide more funding to disadvantaged schools</li>
+      </ul>
+    </div>
+
+    <button class="back-button" onclick="goToPage('page2')">Go Back</button>
+  </div>
+</div>
+
+<!-- Nation Page -->
+<div id="nationPage" class="page">
+  <div class="issue-content">
+    <img class="issue-image" src="https://cdn.britannica.com/33/4833-050-F6E415FE/Flag-United-States-of-America.jpg" alt="US Capitol" />
+    <h2>United States</h2>
+
+    <p>As someone who moved to the United States, I always thought of this country as a place where people could start over and build a better life. Lately, though, I’ve been shocked by how hard it is for immigrants. The news is full of stories about families being separated, people waiting years for their cases to be heard, and new laws that make it harder to come here or stay. It feels like the country is less welcoming than it used to be.</p>
+    <p>A big part of the problem is that the immigration system is old and can’t keep up with how many people want to come here. There aren’t enough judges or staff to process cases quickly, so people end up waiting in crowded shelters or detention centers. There are also not enough legal ways for people to come here to work or join their families. This makes some people try to cross the border without permission, which is dangerous for everyone.</p>
+
+
+    <button class="show-solution" onclick="toggleSolution('solution-nation')">Show Solutions</button>
+    <div id="solution-nation" class="solution">
+      <h3>Possible Solutions</h3>
+      <ul>
+        <li>Hire more immigration judges and staff to speed up the system</li>
+        <li>Create more legal pathways for work and family immigration</li>
+        <li>Support community programs that help immigrants adjust</li>
+        <li>Work with other countries to address root causes like poverty and violence</li>
+      </ul>
+    </div>
+
+    <button class="back-button" onclick="goToPage('page2')">Go Back</button>
+  </div>
+</div>
+
+<!-- Citations Page -->
+<div id="citationsPage" class="page">
+  <div class="citation-block">
+    <h3>Community</h3>
+    <p>
+
+      Texas Education Agency. "Student Attendance Accounting Handbook." Texas Education Agency, tea.texas.gov/sites/default/files/student-attendance-accounting-handbook-2023-2024.pdf. Accessed 11 May 2025.
+    </p> IDEA Public Schools. "IDEA Brownsville College Prep." IDEA Public Schools, ideapublicschools.org/schools/idea-brownsville/. Accessed 11 May 2025.
+    </p>
+  </div>
+
+  <div class="citation-block">
+    <h3>City</h3>
+    <p>
+
+      U.S. Census Bureau. "QuickFacts: Brownsville city, Texas." United States Census Bureau, www.census.gov/quickfacts/brownsvillecitytexas. Accessed 11 May 2025.
+    </p> Centers for Disease Control and Prevention. "Chronic Disease in Texas." CDC, www.cdc.gov/chronicdisease/resources/publications/factsheets/tx.htm. Accessed 11 May 2025.
+    </p> Texas Department of State Health Services. "Health Disparities in Texas." DSHS, www.dshs.texas.gov. Accessed 11 May 2025.
+
+    </p>
+  </div>
+
+  <div class="citation-block">
+    <h3>State</h3>
+    <p>
+
+      Swaby, Aliyya. "Texas House passes public school funding bill, but Senate stalls over vouchers." The Texas Tribune, 21 Nov. 2023, www.texastribune.org/2023/11/21/texas-house-public-school-funding-vouchers/. Accessed 11 May 2025.
+    </p> Texas American Federation of Teachers. "Texas Senate Stalls on Public School Funding While Fast-Tracking Vouchers." Texas AFT, 2024, www.texasaft.org/legislature/texas-senate-stalls-on-public-school-funding-while-fast-tracking-vouchers/. Accessed 11 May 2025.
+    </p>  Texas Legislature Online. "House Bill 2." Texas Legislature Online, capitol.texas.gov/BillLookup/History.aspx?LegSess=88R&Bill=HB2. Accessed 11 May 2025.
+    </p>
+  </div>
+
+  <div class="citation-block">
+    <h3>Nation</h3>
+    <p>
+
+      Migration Policy Institute. "U.S. Immigration Policy." Migration Policy Institute, www.migrationpolicy.org/topics/us-immigration-policy. Accessed 11 May 2025.
+    </p> Krogstad, Jens Manuel, and Ana Gonzalez-Barrera. "Key facts about U.S. immigration policies and Biden’s proposed changes." Pew Research Center, 11 Feb. 2021, www.pewresearch.org/short-reads/2021/02/11/key-facts-about-u-s-immigration-policies-and-bidens-proposed-changes/. Accessed 11 May 2025.
+    </p>American Immigration Council. "The U.S. Immigration System: Frequently Asked Questions." American Immigration Council, www.americanimmigrationcouncil.org/research/how-united-states-immigration-system-works. Accessed 11 May 2025.
+    </p>
+  </div>
+
+  <button class="back-button" onclick="goToPage('page2')">Go Back</button>
+</div>
+
+<script>
+  function goToPage(pageId) {
+    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+  }
+
+  function toggleSolution(id) {
+    const section = document.getElementById(id);
+    section.style.display = section.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
