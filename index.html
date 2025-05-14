@@ -51,7 +51,7 @@
     Made by Loaie Adada<br>
     Educated by Ms. Moseley
   </div>
-  
+
   <style>
     body {
       margin: 0;
@@ -243,6 +243,7 @@
 <!-- Page 2 -->
 <div id="page2" class="page">
   <h2>Select a Level to Explore Civic Issues</h2>
+  <button id="engagementBtn" class="button" style="top: 55%; left: 50%; transform: translate(-50%, -50%);" onclick="goToPage('engagementPage')">My Engagement</button>
   <button id="community" class="button" onclick="goToPage('communityPage')">In My Community</button>
   <button id="city" class="button" onclick="goToPage('cityPage')">In My City</button>
   <button id="state" class="button" onclick="goToPage('statePage')">In My State</button>
@@ -282,10 +283,10 @@
     <img class="issue-image" src="https://www.brownsvilletx.gov/ImageRepository/Document?documentID=4355&&thumbnailSize=AspectPreserved_Thumb100X100" alt="Brownsville City Hall" />
     <h2>City: Brownsville, Texas</h2>
 
-<p>Brownsville is a city with a lot of culture and a colourful history, but we have some real problems when it comes to health. A lot of people here struggle with things like diabetes, obesity, and heart problems though it can be overlooked. These health issues are worse here than in many other places in Texas or the United States, with the Rio Grande area of texas having over 43.1% obesity rate according to recent studies. There are a few main reasons this is happening.<p>
+    <p>Brownsville is a city with a lot of culture and a colourful history, but we have some real problems when it comes to health. A lot of people here struggle with things like diabetes, obesity, and heart problems though it can be overlooked. These health issues are worse here than in many other places in Texas or the United States, with the Rio Grande area of texas having over 43.1% obesity rate according to recent studies. There are a few main reasons this is happening.<p>
     <p>First, Brownsville is an underfunded city. Many families don’t have much money, and that makes it hard to afford healthy food or go to the doctor when they need to. Fast food and junk food are cheap and easy to get, while offering little to no nutrition. And the prices for healthy alternatives or even just fruits or vegetables are out of hand.<p>
-<p>Second, there’s not enough health education. Many people don’t know about healthy eating, exercise, or how to prevent diseases. Institutions try to assist, but they don’t always have the resources to teach everyone about staying healthy. This means that unhealthy habits can get passed down from parents to kids especially in a city where most are uneducated about health.<p>
- <p>Finally, our citys  hospitals and clinics are often crowded or underfunded, and Some people from lower income househounds don’t have insurance or can’t get an appointment, so they just skip going to the doctor thinking whats the worst that can happen. Language barriers and transportation problems make it even harder for some families who migrate from mexico to the Untied States to get the help. <p>
+    <p>Second, there’s not enough health education. Many people don’t know about healthy eating, exercise, or how to prevent diseases. Institutions try to assist, but they don’t always have the resources to teach everyone about staying healthy. This means that unhealthy habits can get passed down from parents to kids especially in a city where most are uneducated about health.<p>
+    <p>Finally, our citys  hospitals and clinics are often crowded or underfunded, and Some people from lower income househounds don’t have insurance or can’t get an appointment, so they just skip going to the doctor thinking whats the worst that can happen. Language barriers and transportation problems make it even harder for some families who migrate from mexico to the Untied States to get the help. <p>
 
     <button class="show-solution" onclick="toggleSolution('solution-city')">Show Solutions</button>
     <div id="solution-city" class="solution">
@@ -308,8 +309,9 @@
     <img id="texas-image" class="issue-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Texas_flag_map.svg/1200px-Texas_flag_map.svg.png" alt="Texas State Capitol" />
     <h2>State: Texas</h2>
 
-    <p>Right now the state that I live in Texas, is having a huge debate about how to pay for public schools, and about funding in general. For years, money that schools get for each student hasn’t been keeping up with the rate of inflation and pirce increases, even though everything else is getting more expensive schools are still underfunded. This means schools have to make tough  choices sometimes cutting teachers, sports, or music programs. Though there’s a new law that lets families use public money to pay for private school tuition, which is called a voucher program.<p>
-<p>Supporters of vouchers say it gives parents more choices, but a lot of teachers and parents are worried. They think this will take even more money away from public schools, especially in neighborhoods that already don’t have enough. House Bill 2, a bill that would give public schools more money per student and raise teacher pay, passed in the Texas House but is stuck in the Senate right now. If it doesn’t pass, some schools could run out of money and even close thus leading to an increase in miseducation and the lowering of the education standard that is already one of the lowest across the world for a first world country to prove this, in the 2022 PISA (Programme for International Student Assessment) results, the U.S. ranked 28th out of 37 OECD (Organisation for Economic Co-operation and Development) member countries in math, performing below the OECD average.<p>
+<p>Right now my state, Texas, is having huge debates about how to pay and allocate money for public schools, and about funding in general. For years, money that schools get for each student hasn’t been keeping up with the rate of inflation and pirce increases for everything that students need, even though everything else is getting more expensive, schools are still underfunded. This means schools have to make tough choices, sometimes cutting teachers, sports, or programming programs for students who are passionate about extracurricular activities. Though there’s a new law that lets families use public money to pay for private school tuition, this law will hopefully help students be able to get hte best education that they need, which is called a voucher program.
+
+    <p>Supporters of vouchers say it gives parents more choices, but a lot of teachers and parents are worried. They think this will take even more money away from public schools, especially in neighborhoods that already don’t have enough. House Bill 2, a bill that would give public schools more money per student and raise teacher pay, passed in the Texas House but is stuck in the Senate right now. If it doesn’t pass, some schools could run out of money and even close thus leading to an increase in miseducation and the lowering of the education standard that is already one of the lowest across the world for a first world country to prove this, in the 2022 PISA (Programme for International Student Assessment) results, the U.S. ranked 28th out of 37 OECD (Organisation for Economic Co-operation and Development) member countries in math, performing below the OECD average.<p>
     <
 
     <button class="show-solution" onclick="toggleSolution('solution-state')">Show Solutions</button>
@@ -334,8 +336,8 @@
     <img class="issue-image" src="https://cdn.britannica.com/33/4833-050-F6E415FE/Flag-United-States-of-America.jpg" alt="US Capitol" />
     <h2>United States</h2>
 
-    </p> someone who moved to the United States recently, I always thought of this country as a place where people could start over and build a better life, as this is what I saw on tv growing up. Lately, though, I’ve been shocked by how hard it is for immigrants to move to this nation that is build on protection. The news is full of stories about families being separated, people waiting years for their cases to be heard, and new laws that make it harder to come here or stay. It feels like the country is less welcoming than it used to be. </p>
-    <p> A big part of the problem is that the immigration system is old and can’t keep up with how many people want to come here. There aren’t enough judges or staff to process cases quickly, so people end up waiting in crowded shelters or detention centers. There are also not enough legal ways for people to come here to work or join their families. This makes some people try to cross the border without permission, which is dangerous for everyone since the people crossing could get killed and the border guards could also get hurt in the process.<p>
+     </p> As someone who moved to the America recently, I always thought of this country as a place where people could start over and build a better life usually coming from a country where america is portrayed as the great getaway, as this is what I saw on tv growing up in a small city in Lebanon . Lately, though, I’ve been shocked and horrified by how hard it is for immigrants to move to this nation that is build on protection, and how they are being treated even if they had already arrived here which is making immigrants like me scared. The news is horrifing as you hear about families being split apart and people waiting years for their cases to be heard and then getting biased jurreys that dont give them the light of day to speak their truth, and new laws that make it harder to come here or stay. It feels like the country is less welcoming than it used to be and does not want immigrants even tho this nation was built on immigrant labor who constructed all of americas infrastructure .  </p>
+    <p> A big part of the problem is that the immigration system is a old system that remains unchecked, and can’t keep up with how many people want to come here as the world is a horrifying place and people want to seek refuge in the nation built on being the land of the free. There aren’t enough judges or staff to process cases quickly and in some cases these judges can be opposed to immigrants themselves and rule in a biased manner, so people end up waiting in crowded shelters or detention centers or even just rejected outright and forced to go back to possible war torn nations. There are also not enough legal ways for people to come here to work or join their families. This makes some people try to cross the border without permission, which is dangerous for everyone since the people crossing could get killed and the border guards could also get hurt in the process.<p>
 
 
     <button class="show-solution" onclick="toggleSolution('solution-nation')">Show Solutions</button>
@@ -373,14 +375,14 @@
     </p> Texas Department of State Health Services. "Health Disparities in Texas." DSHS, www.dshs.texas.gov. Accessed 8 May 2025.    </p>
     </p> Texas Department of State Health Services. “Obesity Data.” Texas Department of State Health Services, https://www.dshs.texas.gov/obesity-texas/obesity-data. Accessed 8 May 2025.
 
-  </p>
+    </p>
   </div>
 
   <div class="citation-block">
     <h3>State</h3>
     <p>
 
-      Swaby, Aliyya. "Texas House passes public school funding bill, but Senate stalls over vouchers." The Texas Tribune, 21 Nov. 2023, www.texastribune.org/2023/11/21/texas-house-public-school-funding-vouchers/. Accessed 8 May 2025.
+    <p>  Swaby, Aliyya. "Texas House passes public school funding bill, but Senate stalls over vouchers." The Texas Tribune, 21 Nov. 2023, www.texastribune.org/2023/11/21/texas-house-public-school-funding-vouchers/. Accessed 8 May 2025.
     </p> Texas American Federation of Teachers. "Texas Senate Stalls on Public School Funding While Fast-Tracking Vouchers." Texas AFT, 2024, www.texasaft.org/legislature/texas-senate-stalls-on-public-school-funding-while-fast-tracking-vouchers/. Accessed 8 May 2025.
     </p>  World Population Review. “PISA Scores by Country 2024.” World Population Review, https://worldpopulationreview.com/country-rankings/pisa-scores-by-country. Accessed 8 May 2025.
     </p> Texas Legislature Online. "House Bill 2." Texas Legislature Online, capitol.texas.gov/BillLookup/History.aspx?LegSess=88R&Bill=HB2. Accessed 8 May 2025.
@@ -411,6 +413,55 @@
     section.style.display = section.style.display === 'block' ? 'none' : 'block';
   }
 </script>
+<!-- Engagement Page -->
+<div id="engagementPage" class="page">
+  <div class="issue-content">
+    <h2>My Engagement</h2>
 
+    <!-- In My Community Section -->
+    <section>
+      <h3>In My Community</h3>
+      <p>
+        As a result of learning about these attendance issues at school, I have dedicated myself to take real steps in terms of getting attendance not only but also getting students more engaged, and my steps for doing so will be as follows. First I plan to speak directly with school officials and teatchers about how we can strengthen our attendance policy and maybe what they think is the reason attendance issues are rising, also the policy changes must fair to students.
+      </p>
+      <p>
+        At the same time, I want to hear from my peers  the ones directly affected. I’m going to design and conduct surveys to understand why some students don’t feel motivated to come to school and try my best to rally people in higher positions to listen to these results on why people are choosing not to come and maybe make changes based on what the students want.
+      </p>
+    </section>
+
+    <!-- In My City Section -->
+    <section>
+      <h3>In My City</h3>
+      <p>
+        Next school year, I plan to join HOSA (Health Occupations Students of America), a student led organization that focuses on health and public service, at my school IDEA brownsville. Joining HOSA will not only help me learn more about health myself as i will be majoring in biomedical engineering, but it will also give me the chance to be part of real projects that can help others around my city. One goal HOSA has is to host a community health fair where they plan to educate people, spread awareness, and hopefully motivate others to take their health seriously, and to me this sounds very enticing and thus I will do my best to get into hosa next year.
+      </p>
+      <p>
+        Outside of school, I’m also planning to volunteer at Valley Baptist Medical Center during the summer. It’s one of the main hospitals here, and I want to do whatever I can  even if it’s just helping with small tasks to support the people working there and the patients in need. I hope this experience helps me understand more about the real challenges in healthcare and what I can do to help improve things for my city in the future, thus this engagement of mine all aims to better my community but also my city since, health is a real issue here in brownsville and i want to do my best to not only help but also educate the people so they can educate their own people and spread the word of what must be done to lower rates of obesity and health issues .
+      </p>
+    </section>
+    <!-- In My State Section -->
+    <section>
+      <h3>In My State</h3>
+      <p>
+        To engage with this issue of underfunding of schools and the house bill 2, I want to start by raising awareness at my school for the bill. Most students don’t even know what House Bill 2 is or how the funding system works especially in my underfunded community. I plan to create a  simple flyer explaining the situation and share it around school and possibly on social media. I also want to gather signatures for a student petition showing support for increasing funding for public schools and sending it to whoever wants to listen, thus helping keep extracurriculars thriving and allowing for more clubs to be supported.
+      </p>
+      <p>
+        Beyond that, I’m choosing to write a short letter to my local state representative in texas explaining why this matters to me as a student in the public school system and how i think the bill will affect us, i also want to see if i can get a response about why school funding works the way it does and why cant we change the system in a way that benefits all. I want my voice to be heard and i want to be educated about why we are in the situation we are in now, and even if I can’t vote yet as I am simply a junior in highschool, I can still speak up and I know i can be heard.
+      </p>
+    </section>
+    <!-- In My Nation Section -->
+    <section>
+      <h3>In My Nation</h3>
+      <p>
+        After learning about how the immigration system works in the US through my time as a AP government students, and seeing how unfair or overwhelming it can be through many court cases that are horrifying, I’ve realized I want to understand this issue more deeply. I don’t want to start arguments or create controversy,  I want to help people who need help, I want to help those who were in my position in a third world country who came to America to seek better education. And the best way to do that is to start by learning the truth from people who are in positions of leadership, and to hear their opinion on what's currently happening about the issue of immigration.
+      </p>
+      <p>
+        That’s why I plan to reach out to an official, like one of our state senators or U.S. congressional representatives for texas , and ask them what their stance is on immigration and what solutions they believe in. I want to know: why is the system the way it is? What can be changed? And how do they think we can make things better for the families trying to build a new life here? But also how they think it should be changed not just a political answer a genuine human answer
+      </p>
+    </section>
+    <button class="back-button" onclick="goToPage('page2')">Go Back</button>
+  </div>
+</div>
+</div>
 </body>
 </html>
